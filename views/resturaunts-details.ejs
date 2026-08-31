@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <%- include('./partialy/nav.ejs') %>
+    <section id="res-details">
+    <h1> restaurant Details</h1>
+    
+
+<h2><%= resturaunt.name %> </h2>
+
+<h3><%= resturaunt.address %></h3>
+
+<h3><%= resturaunt.phone %></h3>
+
+    </section>
+<section id="rest-cards-sec">
+<% for (let item of resturaunt.menu) { %>
+
+    <div id="res-card">
+    <p>Meal:</p>
+    <p><%= item.name %></p>
+    <p>Price: <%= item.price %> BD</p>
+    <p>Rating: <%= item.rating %></p>
+    
+</div>
+<% } %>
+
+</section>
+</body>
+
+</html>
