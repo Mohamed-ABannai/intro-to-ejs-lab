@@ -1,4 +1,3 @@
-
 const resturaunts = [
   {
     id: 1,
